@@ -1,0 +1,7 @@
+---
+layout: post
+title: Random
+lead: Some stuff about the post
+---
+
+Post content!
