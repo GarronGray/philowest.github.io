@@ -1,0 +1,44 @@
+---
+layout: default
+title: About
+lead: me
+---
+
+<div class="alert alert-info" role="alert">
+  <p>I’m moving to Sydney in Jan 2016! I have a Skilled Independent visa (subclass 189). Please feel free to <a href="mailto:philowest@gmail.com?subject=Mail from philowest.github.io">Email me</a> if you’d like to chat.</p>
+</div>
+
+<p>I’m a developer currently living in Joburg.</p>
+
+<p>I joined Momentum (link to about page) in 2009 as a software engineer. Since then I’ve helped to improve development processes in our area by introducing dependency management, continuous delivery, and various automated testing approaches. I initially worked on our client-facing web site, and later moved to building shared services and applications for the group. Towards the end of 2012 we made the shift towards a more agile way of work, and despite the frustrations that come with doing this in a big corporate, we’ve experienced an increase in productivity along with a better work/life balance.</p>
+
+<p>Prior to that I worked at Telkom, and then Discovery, after completing a Masters degree in Computer Science at Rhodes University in Grahamstown.</p>
+
+<p>Here are a few projects I’ve worked on over the last few years:</p>
+{% for project in site.data.projects %}
+<div class="media">
+  {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+  {% if thecycle == 'odd' %}
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" src="/assets/images/thumbnail.svg" alt="Temp">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">{{ project.name }}</h4>
+    <p>{{ project.info }}</p>
+  </div>
+  {% endif %}
+  {% if thecycle == 'even' %}
+  <div class="media-body">
+    <h4 class="media-heading">{{ project.name }}</h4>
+    <p>{{ project.info }}</p>
+  </div>
+  <div class="media-right">
+    <a href="#">
+      <img class="media-object" src="/assets/images/thumbnail.svg" alt="Temp">
+    </a>
+  </div>
+  {% endif %}
+</div>
+{% endfor %}
