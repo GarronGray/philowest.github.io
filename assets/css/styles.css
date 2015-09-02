@@ -35,7 +35,9 @@ ul {
     margin-top: 0px;
 }
 
-
+.img-circle {
+    width: 100px;
+}
 
 .info {
     width: 75px;

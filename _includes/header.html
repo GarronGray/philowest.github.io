@@ -38,7 +38,18 @@
   <div class="container">
     <header>
       <div class="page-header">
-        <h2 class="title">{{ page.title  }}</h2>
-        <p class="lead">{{ page.lead  }}</p>
+        <div class="media">
+
+          <div class="media-body">
+            <h2 class="title">{{ page.title  }}</h2>
+            <p class="lead">{{ page.lead  }}</p>
+          </div>
+
+
+        {% if header_image != blank %}
+        <div class="media-right">
+          <img class="img-circle" src="{{ page.header_image }}"/>
+          </div>
+          {% endif %}
       </div>
     </header>
