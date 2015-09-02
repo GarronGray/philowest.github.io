@@ -1,13 +1,17 @@
 ---
 layout: default
-title: Phil West
+title: Posts
 lead: slacker
 ---
 
-<ul>
-  {% for post in site.posts %}
-  <li><a href="{{ post.url }}">{{ post.title }}</a>
-    {{ post.date | date_to_string}}
-  </li>
-  {% endfor %}
-</ul>
+{% for post in site.posts %}
+  <div class="media">
+    <div class="media-left">
+        <p class="info"/>
+    </div>
+    <div class="media-body">
+      <a href="{{ post.url }}"><h4 class="media-heading">{{ post.title }}</h4></a>
+      {{ post.date | date_to_string}}<br/>
+      {{ post.lead }}
+    </div>
+{% endfor %}
