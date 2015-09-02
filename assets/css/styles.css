@@ -31,6 +31,12 @@ ul {
     -webkit-font-smoothing: subpixel-antialiased;
 }
 
+.post-glyph {
+  font-size: 20px;
+    color: #999;
+    line-height: 70px;
+}
+
 .page-header {
     margin-top: 0px;
 }
