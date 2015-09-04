@@ -46,9 +46,7 @@
             <h2 class="title">{{ page.title  }}</h2>
             <p class="lead">{{ page.lead  }}</p>
           </div>
-
-
-        {% if header_image != blank %}
+        {% if page.header_image %}
         <div class="media-right">
           <img class="img-circle" src="{{ page.header_image }}"/>
           </div>
