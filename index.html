@@ -8,7 +8,7 @@ lead: on software development
   <div class="media">
     <div class="media-left">
         <p class="info">
-          <span class="glyphicon glyphicon-signal post-glyph" aria-hidden="true"></span>
+          <span class="glyphicon {{ post.glyph }} post-glyph" aria-hidden="true"></span>
         </p>
     </div>
     <div class="media-body">
@@ -16,4 +16,5 @@ lead: on software development
       {{ post.date | date_to_string}}<br/>
       {{ post.lead }}
     </div>
+  </div>
 {% endfor %}
